@@ -16,6 +16,7 @@ require 'dm-validations/validators/method_validator'
 require 'dm-validations/validators/block_validator'
 require 'dm-validations/validators/uniqueness_validator'
 require 'dm-validations/validators/acceptance_validator'
+require 'dm-validations/validators/size_validator'
 
 require 'dm-validations/support/context'
 require 'dm-validations/support/object'
@@ -117,6 +118,7 @@ module DataMapper
       include DataMapper::Validate::ValidatesWithBlock
       include DataMapper::Validate::ValidatesIsUnique
       include DataMapper::Validate::AutoValidate
+      include DataMapper::Validate::ValidatesSize
 
       # Return the set of contextual validators or create a new one
       #
